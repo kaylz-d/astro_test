@@ -1,9 +1,10 @@
 ---
-import About from '../components/About.astro';
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
-import LandingCard from '../components/LandingCard.astro';
+import About from "../components/About.astro";
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import LandingCard from "../components/LandingCard.astro";
+// import SplineComponent from "../components/SplineComponent.jsx";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -14,8 +15,15 @@ import LandingCard from '../components/LandingCard.astro';
 	<h1>Okay this is weird</h1>
 	<a href="index2"><button>Next page!</button></a> -->
 	<Navigation />
+	<!-- i dont like the spline embed cuz the bg isn't clear -->
+	<!-- <script
+		type="module"
+		src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"
+	></script>
+	<spline-viewer
+		url="https://prod.spline.design/xpL9qLiMvKRCDCV8/scene.splinecode"
+	></spline-viewer> -->
 	<LandingCard />
+	<!-- <SplineComponent client:load/> -->
 	<!-- <About /> -->
 </Layout>
-
-
