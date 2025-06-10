@@ -1,3 +1,7 @@
+---
+import background from '../assets/windows_original_files_18.jpg';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,7 +10,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="stylesheet" href="src\styles\global.css" />
+		<!-- <link rel="stylesheet" href="src\styles\global.css" /> -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Onest:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
@@ -16,6 +20,7 @@
 	</head>
 
 	<body>
+		<img id="background" src={background.src} alt="" fetchpriority="high" />
 		<slot />
 	</body>
 
@@ -33,6 +38,17 @@
 			align-items: center;
 			overflow: hidden;
 			flex-direction: column;
+			/* background-image: "src\assets\windows_original_files_18.jpg"; */
+		}
+
+		#background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			filter: blur(5px);
 		}
 	</style>
 </html>
