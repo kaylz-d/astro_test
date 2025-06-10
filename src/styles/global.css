@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+
+html {
+  font-family: "Lexend Deca";
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    padding-right: 8px;
+}
