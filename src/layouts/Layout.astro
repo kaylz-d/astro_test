@@ -1,5 +1,5 @@
 ---
-import background from '../assets/windows_original_files_18.jpg';
+import background from "../assets/windows_original_files_18.jpg";
 ---
 
 <!doctype html>
@@ -22,6 +22,12 @@ import background from '../assets/windows_original_files_18.jpg';
 	<body>
 		<img id="background" src={background.src} alt="" fetchpriority="high" />
 		<slot />
+
+		<footer>
+			<ul>
+				<li>my github!</li>
+			</ul>
+		</footer>
 	</body>
 
 	<style>
@@ -49,6 +55,19 @@ import background from '../assets/windows_original_files_18.jpg';
 			height: 100%;
 			z-index: -1;
 			filter: blur(5px);
+		}
+
+		footer {
+			color: white;
+			position: absolute;
+			width: 100vw;
+			height: 72px;
+			bottom: 20px;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0px;
 		}
 	</style>
 </html>

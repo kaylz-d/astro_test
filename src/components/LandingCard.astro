@@ -1,24 +1,23 @@
 ---
 import moominBubble from "../assets/moomin_bubble.jpg";
 import star from "../assets/Star 1.svg";
+import orb from "../assets/orb.jpg";
 ---
 
 <div id="landing-card">
     <div class="left-column">
-        <div>
-            <h1>Kaylee Dinh</h1>
-            <p>
-                Hello hello! I'm a high school student who enjoys making
-                websites.
-            </p>
-        </div>
-        <div>
-            <img src={star.src} alt="star"
-            style="height: 30%">
-        </div>
+        <img id="moomin-pic" src={moominBubble.src} alt="moomin bubble" />
     </div>
     <div class="right-column">
-        <img id="moomin-pic" src={moominBubble.src} alt="moomin bubble" />
+        <h1>Kaylee Dinh</h1>
+        <p>
+            Hello hello! I'm a high school student who enjoys making websites.
+        </p>
+        <!-- <ul id="button-row">
+            <li><img src={star.src} alt="star"></li>
+            <li><img src={star.src} alt="star"></li>
+            <li><img src={star.src} alt="star"></li>
+        </ul> -->
     </div>
 </div>
 
@@ -28,14 +27,19 @@ import star from "../assets/Star 1.svg";
     }
 
     #landing-card {
-        margin-top: 10vh;
+        margin-top: 4vh;
         /* display: grid;
         grid-template-columns: 60% 40%;
         overflow: hidden; */
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 80vh;
+        height: 40vh;
+        /* this min-height line
+        is what makes the card look
+        smaller than the bubble
+        but it's lowk kinda cool */
+        min-height: 200px;
         width: 80vw;
         /* From https://css.glass */
         /* background: rgba(255, 255, 255, 0.2); */
@@ -53,14 +57,8 @@ import star from "../assets/Star 1.svg";
     }
 
     .left-column {
-        padding-left: 10%;
-        display: flex;
-        flex-direction: column;
-        max-width: 50%;
-    }
-
-    .right-column {
-        padding-right: 10%;
+        margin-left: 10%;
+        margin-right: 5%;
         height: 80%;
         width: auto;
         margin: auto;
@@ -72,20 +70,77 @@ import star from "../assets/Star 1.svg";
         this needs to be more responsive */
     }
 
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 50%;
+        max-height: 100%;
+        margin-right: 10%;
+        padding-inline: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 16px;
+        border-style: solid;
+        border-color: none;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-image: radial-gradient(
+            rgba(255, 255, 255, 0.37),
+            rgba(255, 255, 255, 0.622)
+        );
+        transition: 0.8s;
+    }
+
+    .right-column:hover {
+        transform: scale(1.1);
+    }
+
     #moomin-pic {
         aspect-ratio: 1/1;
         overflow: hidden;
         border-radius: 50%;
-        border-color: none;
+        border-color: transparent;
         border-style: solid;
         object-fit: fill;
         flex-shrink: 1;
         max-width: 100%;
-        -webkit-filter: hue-rotate(-20deg);
+        -webkit-filter: hue-rotate(-40deg);
+        -webkit-filter: contrast(120%);
+        -webkit-filter: saturate(80%);
+        -webkit-filter: brightness(110%);
+        opacity: 70%;
+        animation: bounce 5s ease-in-out infinite;
+        
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    #button-row {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        max-height: 100%;
+        list-style: none;
+        padding: 0px;
+        transform: scale(0.25);
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 4vw;
         padding-bottom: 0px;
         margin: 0px;
     }
