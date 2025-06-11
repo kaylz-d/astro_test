@@ -1,0 +1,3 @@
+[submodule "astro_test"]
+    path = astro_test
+    url = https://github.com/kaylz-d/astro_test
