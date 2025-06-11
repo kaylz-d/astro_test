@@ -1,0 +1,3 @@
+[submodule "astro-website"]
+    path = astro-website
+    url = https://github.com/your-username/astro-website.git
