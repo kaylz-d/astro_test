@@ -14,7 +14,7 @@ import LandingCard from "../components/LandingCard.astro";
 	<!-- <Welcome />
 	<h1>Okay this is weird</h1>
 	<a href="index2"><button>Next page!</button></a> -->
-	<Navigation />
+	
 	<!-- i dont like the spline embed cuz the bg isn't clear -->
 	<!-- <script
 		type="module"
@@ -24,6 +24,10 @@ import LandingCard from "../components/LandingCard.astro";
 		url="https://prod.spline.design/xpL9qLiMvKRCDCV8/scene.splinecode"
 	></spline-viewer> -->
 	<LandingCard />
+
+	<!-- it's important to have Navigation last so that it loads on top! -->
+
+	<Navigation />
 	<!-- <SplineComponent client:load/> -->
 	<!-- <About /> -->
 </Layout>

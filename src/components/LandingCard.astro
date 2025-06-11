@@ -1,16 +1,24 @@
 ---
 import moominBubble from "../assets/moomin_bubble.jpg";
+import star from "../assets/Star 1.svg";
 ---
 
 <div id="landing-card">
     <div class="left-column">
-        <h1>Kaylee Dinh</h1>
-        <p>
-            Hello hello! I'm a high school student who enjoys making websites.
-        </p>
+        <div>
+            <h1>Kaylee Dinh</h1>
+            <p>
+                Hello hello! I'm a high school student who enjoys making
+                websites.
+            </p>
+        </div>
+        <div>
+            <img src={star.src} alt="star"
+            style="height: 30%">
+        </div>
     </div>
-    <div id="moominBubble">
-        <img src={moominBubble.src} alt="moomin bubble" />
+    <div class="right-column">
+        <img id="moomin-pic" src={moominBubble.src} alt="moomin bubble" />
     </div>
 </div>
 
@@ -20,14 +28,14 @@ import moominBubble from "../assets/moomin_bubble.jpg";
     }
 
     #landing-card {
-        display: grid;
+        margin-top: 10vh;
+        /* display: grid;
         grid-template-columns: 60% 40%;
-        overflow: hidden;
-        /* display: flex;
-        flex-direction: column; */
+        overflow: hidden; */
+        display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 50vh;
+        height: 80vh;
         width: 80vw;
         /* From https://css.glass */
         /* background: rgba(255, 255, 255, 0.2); */
@@ -45,28 +53,39 @@ import moominBubble from "../assets/moomin_bubble.jpg";
     }
 
     .left-column {
-        padding: 100px;
+        padding-left: 10%;
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
     }
 
-    #moominBubble {
+    .right-column {
+        padding-right: 10%;
         height: 80%;
         width: auto;
         margin: auto;
         align-items: center;
         justify-content: space-around;
         display: flex;
+        flex-shrink: 1;
         /* idk what i'm doing
         this needs to be more responsive */
+    }
+
+    #moomin-pic {
         aspect-ratio: 1/1;
         overflow: hidden;
         border-radius: 50%;
         border-color: none;
         border-style: solid;
         object-fit: fill;
+        flex-shrink: 1;
+        max-width: 100%;
+        -webkit-filter: hue-rotate(-20deg);
     }
 
     h1 {
-        font-size: 80px;
+        font-size: 40px;
         padding-bottom: 0px;
         margin: 0px;
     }

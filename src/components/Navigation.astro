@@ -1,5 +1,5 @@
 ---
-import AboutMe from "../pages/about-me.astro"
+import AboutMe from "../pages/about-me.astro";
 ---
 
 <head>
@@ -64,7 +64,17 @@ import AboutMe from "../pages/about-me.astro"
         width: 100vw;
         height: 72px;
         top: 0px;
+        /* animation: 1s ease-in 0s slideInFromLeft; */
     }
+
+    /* @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    } */
 
     .nav-anchor {
         height: 100%;
@@ -104,51 +114,33 @@ import AboutMe from "../pages/about-me.astro"
     .sidebar a {
         width: 100%;
     }
+
+    .heading-name {
+        max-width: 20vw;
+        height: auto;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
 </style>
 
 <div id="nav-bar">
-    <ul class="sidebar">
-        <div class="left-side" style="margin-bottom: 10%">
-            <li style="padding-right: 1em;">
-                <span style="font-weight: bold;">Kaylee Dinh's Website</span>
-            </li>
-        </div>
-        <li>
-            <a class="nav-anchor" href="../pages/about-me.astro/">About Me</a>
-        </li>
-        <li>
-            <a class="nav-anchor" href="src\pages\projects.astro">My Projects</a
-            >
-        </li>
-        <div>
-            <li>
-                <a href="#"
-                    ><span
-                        class="material-symbols-outlined"
-                        style="color: white; margin-top: 20%;"
-                    >
-                        close
-                    </span></a
-                >
-            </li>
-        </div>
-    </ul>
-
     <ul class="nav-button-list">
         <div class="left-side">
             <li style="padding-right: 1em;">
-                <span style="font-weight: bold; max-width: 20vw; height: auto;">Kaylee Dinh's Website</span>
+                <a class="heading-name" href="/">Kaylee Dinh's Website</a>
             </li>
-            <li>
-                <span class="material-symbols-outlined" style="color: white"> kid_star </span>
+            <li> :)
+                <!-- <span class="material-symbols-outlined" style="color: white">
+                    kid_star
+                </span> -->
             </li>
         </div>
         <li>
-            <a class="nav-anchor" href="src/pages/about-me.astro">About Me</a>
+            <a class="nav-anchor" href="/about-me">About Me</a>
         </li>
         <li>
-            <a class="nav-anchor" href="igiveup.html">My Projects</a
-            >
+            <a class="nav-anchor" href="igiveup.html">My Projects</a>
         </li>
         <!-- <li onclick=showSideBar()>
             <a href="#"
