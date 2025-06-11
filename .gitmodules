@@ -1,3 +1,3 @@
-[submodule "astro-test"]
-	path = astro-test
+[submodule "astro-website"]
+	path = astro-website
 	url = https://github.com/kaylz-d/astro_test
