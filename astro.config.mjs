@@ -12,5 +12,10 @@ export default defineConfig({
     experimentalReactChildren: true,
   })],
 
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
   adapter: cloudflare()
+
 });
